@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <title>Andorinha Food</title>
+  </head>
+
+  <body>
+    <!--MENU HEADER-->
+    <header class="w-full h-[420px] bg-zinc-500 bg-placa bg-cover bg-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="Imagens/logo.jpg"
+          alt="logoandorinha"
+          class="w-30 h-20 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+
+        <h1 class="text-4xl text-white mt-4 mb-2 font-bold">Andorinha Food</h1>
+
+        <span class="text-white font-medium">
+          Rua: Tal, Nº 10, Qª 20 - Iguaiba - Paço Lumiar
+        </span>
+
+        <div class="bg-green-500 px-4 py-1 rounded-lg mt-6" id="date-span">
+          <span class="text-white">
+            Quinta-feira á Domingo - 18:00h ás 22:00h
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!--TÍTULO CARDÁPIO-->
+    <h2
+      class="text-2xl text-orange-500 md:text-3xl font-bold text-center mt-9 mb-6"
+    >
+      CONHEÇA NOSSO CARDÁPIO
+    </h2>
+
+    <!-- INÍCIO CARDÁPIO-->
+
+    <div id="menu">
+      <h2
+        class="text-2xl text-orange-500 md:text-3xl font-bold text-center mt-9 mb-6"
+      >
+        LANCHES
+      </h2>
+      <main
+        class="px-2 mb-16 grid grid-cols-1 md:grid-cols-2 md:gap-9 gap-7 mx-auto max-w-6xl"
+      >
+        <!-- 1 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 px-4">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <h6 class="font-bold text-orange-500">Pizza Doce 1</h6>
+            <p class="text-sm">Descrição do produto com sabores e quantidade</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-price="27"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 2 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 px-4">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <h6 class="font-bold text-orange-500">Pizza Doce 4</h6>
+            <p class="text-sm">Descrição do produto com sabores e quantidade</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 4"
+                data-price="25"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 3 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 px-4">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <h6 class="font-bold text-orange-500">Pizza Doce 3</h6>
+            <p class="text-sm">Descrição do produto com sabores e quantidade</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 3"
+                data-price="15"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 4 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 px-4">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+            <p class="text-sm">Descrição do produto com sabores e quantidade</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 5 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 px-4">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+            <p class="text-sm">Descrição do produto com sabores e quantidade</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 6 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 px-4">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+            <p class="text-sm">Descrição do produto com sabores e quantidade</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+      </main>
+
+      <!--MONTE SUA PIZZA-->
+
+      <div class="mx-auto max-w-7xl px-2 mb-16">
+        <h2
+          class="text-2xl text-orange-500 md:text-3xl font-bold text-center mt-9 mb-6"
+        >
+          MONTE SUA PIZZA
+        </h2>
+      </div>
+
+      <!-- 7 INÍCIO PRODUTO ITEM-->
+      <div class="flex gap-2 px-4 justify-center">
+        <img
+          src="Imagens/1.jpg"
+          alt="pizza"
+          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <h6 class="font-bold text-orange-500">SUA PIZZA A SEU GOSTO</h6>
+          <p class="text-sm">Escolha abaixo suas duas metades da pizza</p>
+
+          <div>
+            <select name="escolha" class="font-bold list-products">
+              <option
+                value="pizza doce 1"
+                data-price="29"
+                data-name="pizza doce 1"
+                selected
+              >
+                GOIABDA COM QUEIJO
+              </option>
+              <option
+                value="pizza doce 2"
+                data-price="24"
+                data-name="pizzadoce2"
+              >
+                BANANA E CANELA
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+            </select>
+
+            <select name="select" class="font-bold list-products">
+              <option
+                value="pizza doce 1"
+                data-price="29"
+                data-name="pizza doce 1"
+              >
+                GOIABDA COM QUEIJO
+              </option>
+              <option
+                value="pizza doce 2"
+                data-price="24"
+                data-name="pizza doce 2"
+                selected
+              >
+                BANANA E CANELA
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+              <option value="carnedesol" data-name="carnedesol" data-price="30">
+                CARNE DE SOL
+              </option>
+            </select>
+          </div>
+
+          <div class="gap-2 text-right mt-3">
+            <button class="bg-gray-900 px-5 rounded" id="btnlistproduct">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM PRODUTO ITEM-->
+
+      <!-- BEBIDAAAS-->
+
+      <div class="mx-auto max-w-7xl px-2 mb-16">
+        <h2
+          class="text-2xl text-orange-500 md:text-3xl font-bold text-center mt-9 mb-6"
+        >
+          BEBIDAS
+        </h2>
+      </div>
+
+      <!-- GRID BEBIDAS-->
+      <div
+        class="px-5 mb-16 grid grid-cols-1 md:grid-cols-2 md:gap-9 gap-7 mx-auto max-w-6xl"
+        id="menu"
+      >
+        <!-- 1 INÍCIO BEBIDA ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/7.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 2 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/8.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 3 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/9.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <!-- Colocar ponto e não vírgula para frações.-->
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 4 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 5 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 6 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+      </div>
+
+      <!-- COMBOS -  PROMOÇÕES-->
+
+      <div class="mx-auto max-w-7xl px-2 mb-16">
+        <h2
+          class="text-2xl text-orange-500 md:text-3xl font-bold text-center mt-9 mb-6"
+        >
+          ANDORINHA PROMOÇÕES
+        </h2>
+      </div>
+
+      <!-- GRID BEBIDAS-->
+      <div
+        class="px-5 mb-16 grid grid-cols-1 md:grid-cols-2 md:gap-9 gap-7 mx-auto max-w-6xl"
+        id="menu"
+      >
+        <!-- 1 INÍCIO BEBIDA ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/7.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-price="27"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 2 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/8.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 3 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/9.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <!-- Colocar ponto e não vírgula para frações.-->
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 4 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 5 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+
+        <!-- 6 INÍCIO PRODUTO ITEM-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="Imagens/1.jpg"
+            alt="pizza"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-80">
+            <h6 class="font-bold text-orange-500">Pizza Doce</h6>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="pizza doce 1"
+                data-name="pizza doce 2"
+              >
+                <!-- Botão adicionar item no carrinho-->
+
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- FIM PRODUTO ITEM-->
+      </div>
+    </div>
+    <!-- FIM CARDÁPIO-->
+
+    <!--MODAL CART-->
+    <div
+      id="cart-modal"
+      class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+        <!--CARRINHO PARA JS-->
+
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        <!--cart total-->
+        <p class="font-bold">Total R$: <span id="cart-total">0.0</span></p>
+        <hr />
+        <h2 class="mt-3"><b>FORMA DE ENTREGA</b></h2>
+
+        <div>
+          <form>
+            <div>
+              <label for="nome" required>Nome</label>
+              <input
+                type="text"
+                name="nome"
+                class="form_input"
+                id="nome"
+                placeholder="Nome"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="contato" required>Contato</label>
+              <input
+                type="number"
+                name="contato"
+                class="form_input"
+                id="contato"
+                placeholder="Contato"
+                required
+              />
+            </div>
+
+            <div class="form_grupo">
+              <label for="formaentrega" class="text">Forma de Entrega</label>
+              <select
+                name="formaentrega"
+                value="formaentrega"
+                class="dropdown"
+                required
+              >
+                <option
+                  selected
+                  disabled
+                  class="form_select_option"
+                  id="retirada"
+                  value=""
+                >
+                  Selecione
+                </option>
+                <option value="retirada" class="form_select_option" id="retirada">
+                  Retirada
+                </option>
+
+                <option value="entrega" class="form_select_option" id="entrega">
+                  Entrega
+                </option>
+              </select>
+              <label for="endereco" required>Digite seu Endereço</label>
+              <input
+                type="text"
+                name="endereco"
+                class="form_input"
+                id="endereco"
+                placeholder="Digite seu Endereço"
+                required
+              />
+            </div>
+
+            <div>
+                <label for="observacao" class="font-bold" required>OBSERVAÇÃO</label>
+                <input
+          
+                  type="text"
+                  name="observacao"
+                  class="form_input font-bold"
+                  id="observacao"
+                  placeholder="Alguma Observação?"
+                  required>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="flex items-center justify-between mt-5 w-full">
+          <button class="font-bold" id="close-modal-btn">Fechar</button>
+          <button
+            id="checkout-btn"
+            class="bg-green-600 text-white px-1 py-1 rounded"
+          >
+            Finalizar pedido
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--FIM MODAL CART-->
+
+    <!-- BUTTON FOOTER CARRINHO-->
+    <footer
+      class="w-full bg-orange-700 py-3 fixed bottom-0 z-40 flex items-center justify-center"
+    >
+      <button
+        class="flex items-center gap-2 text-white font-bold"
+        id="cart-btn"
+      >
+        (<span id="cart-count">0</span>) Veja seu carrinho
+        <i class="fa fa-cart-plus text-lg text-white"> </i>
+      </button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
