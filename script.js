@@ -6,43 +6,35 @@ const cartTotal = document.getElementById("cart-total");
 const checkoutBtn = document.getElementById("checkout-btn");
 const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCounter = document.getElementById("cart-count");
-const retiradaInput = document.getElementById("retirada");
-const entregaInput = document.getElementById("entrega");
 const addressWarn = document.getElementById("address-warn");
 
-let cart = []; //lista do carrinho
+let cart = [];
 
-//Abrir o modal do carrinho
+// Abrir o modal do carrinho
 cartBtn.addEventListener("click", function () {
   updateCartModal();
   cartModal.style.display = "flex";
 });
 
-//Fechar o modal cliando fora
+// Fechar o modal clicando fora
 cartModal.addEventListener("click", function (event) {
   if (event.target === cartModal) {
     cartModal.style.display = "none";
   }
 });
 
-//Botão fechar
+// Botão fechar
 closeModalBtn.addEventListener("click", function () {
   cartModal.style.display = "none";
 });
 
-//Menu - adicioando items no carrinho
+// Menu - adicionando itens no carrinho
 menu.addEventListener("click", function (event) {
-  //console.log(event.target) - descobrir item sendo clicado
-
   let parentButton = event.target.closest(".add-to-cart-btn");
-
-  //console.log(parentButton); - para descobrir em qual item estou clicando
 
   if (parentButton) {
     const name = parentButton.getAttribute("data-name");
     const price = parseFloat(parentButton.getAttribute("data-price"));
-
-    //adicioanr no carrinho
     addToCart(name, price);
   }
 });
@@ -71,12 +63,11 @@ document.getElementById("btnlistproduct").addEventListener("click", () => {
   addToCart(newProduct.name, newProduct.price);
 });
 
-//Função para adicionar no carrinho
+// Função para adicionar no carrinho
 function addToCart(name, price) {
-  const existingItem = cart.find((item) => item.name === name); //find é para o Js analisar toda lista
+  const existingItem = cart.find((item) => item.name === name);
 
   if (existingItem) {
-    //se já existir o item, só aumenta a quant. +1
     existingItem.quantity += 1;
   } else {
     cart.push({
@@ -89,67 +80,51 @@ function addToCart(name, price) {
   updateCartModal();
 }
 
-//atualiza carrinho
+// Atualiza o carrinho
 function updateCartModal() {
   cartItemsContainer.innerHTML = "";
   let total = 0;
 
   cart.forEach((item) => {
-    const cartItemElement = document.createElement("div"); // criando uma div dentro JS, para aparecer o histórico do pedido
-    cartItemElement.classList.add(
-      "flex",
-      "justify-between",
-      "mb-4",
-      "flex-col"
-    );
-
-    document.querySelectorAll('observacao').forEach(item =>(item.textContent))
-    document.querySelectorAll('formaEntrega').forEach(item =>(item.textContent))
-
-    
+    const cartItemElement = document.createElement("div");
+    cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
     cartItemElement.innerHTML = `
-        
-        <hr>
-        <div class='flex items-center  justify-between'>
+      <hr>
+      <div class='flex items-center justify-between'>
         <div>
-        <h3 class='font-bold'> ${item.name} </h3>
-        <p> Qtd: ${item.quantity}</p>
-        <p class='font-medium  mt-2'> R$ ${item.price.toFixed(2)} por item</p>
+          <h3 class='font-bold'>${item.name}</h3>
+          <p>Qtd: ${item.quantity}</p>
+          <p class='font-medium mt-2'>R$ ${item.price.toFixed(2)} por item</p>
         </div>
-
         <button class='remove-cart' data-name='${item.name}'>
-            Remover
-        </button> 
-        
-        </div>
-        `;
+          Remover
+        </button>
+      </div>
+    `;
 
     total += item.price * item.quantity;
 
-    cartItemsContainer.appendChild(cartItemElement); //colocando os elementos da div nova dentro do carrinho
+    cartItemsContainer.appendChild(cartItemElement);
   });
 
   cartTotal.textContent = total.toLocaleString("pt-BR", {
-    //formatando o total
     style: "currency",
     currency: "BRL",
   });
 
-  cartCounter.innerHTML = cart.length; //Estilizando footer - botão de ver carrinho
+  cartCounter.innerHTML = cart.length;
 }
 
-// Função remover item  do carrinho
-
+// Função remover item do carrinho
 cartItemsContainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("remove-cart")) {
     const name = event.target.getAttribute("data-name");
-
-    romeveItemcart(name);
+    removeItemFromCart(name);
   }
 });
 
-function romeveItemcart(name) {
+function removeItemFromCart(name) {
   const index = cart.findIndex((item) => item.name === name);
 
   if (index !== -1) {
@@ -158,95 +133,54 @@ function romeveItemcart(name) {
     if (item.quantity > 1) {
       item.quantity -= 1;
       updateCartModal();
-      return; //para execução ficar sempre ativa
+      return;
     }
 
     cart.splice(index, 1);
-    updateCartModal(); //remover quando tiver só 1 item na lista
+    updateCartModal();
   }
 }
 
-//ENTREGA
-entregaInput.addEventListener("id", function (event) {
-  let optionId = event.target.value;
-});
 
-//ENTREGA
-retiradaInput.addEventListener("input", function (event) {
-  let inputValue = event.target.value;
-});
 
-//FINALIZAR PEDIDO
+
+// Finalizar pedido
 checkoutBtn.addEventListener("click", function () {
-  let nome = document.getElementById("nome").value;
-  let contato = document.getElementById("contato").value;
-  let endereco = document.getElementById("endereco").value;
-  const formaEntrega = document.querySelector(".dropdown").value
-
+  let nome = document.getElementById("nome").value.trim();
+  let contato = document.getElementById("contato").value.trim();
+  let endereco = document.getElementById("endereco").value.trim();
+  let formaentrega = document.getElementById("formaentrega").value
+  const observacao = document.getElementById("observacao").value.trim();
+  const bairro = document.getElementById("bairro").value.trim(); // Corrigido para usar getElementById
+  const formapg = document.getElementById("formapg").value.trim(); // Corrigido para usar getElementById
   
-
-
-  /*const isOpen =checkRestaurantOpen();
-    if(!isOpen){
-        alert('RESTAURANTE FECHADO NO MOMENTO')
-    return;
-    } */
 
   if (cart.length === 0) return;
 
-  /* if(addressInput.value === '') {
-    addressWarn.classList.remove('hidden')  //Esse código não está funcinando! Remover o hidden e aparecer alerta em vermelho para pessoa digitar o endereço
- }*/
 
-  //Enviar pedido para api do whats]
 
   let cartItem = cart
-    .map((item) => {
-      console.log(item);
-      return `${item.name} Quantidade (${item.quantity}) Preço: R$${item.price} `;
-    })
-    .join("");
- 
+    .map((item) => `➡ ${item.quantity}x ${item.name} Preço: R$${item.price.toFixed(2)}`)
+    .join("\n");
 
-  //const message = encodeURIComponent(cartItem)
   const phone = "9892314854";
 
   const mensagem = `
-
 Itens:
-➡ 1x TRIBO CASADINHA 770ML 
-Nome: ${nome} - Contato: ${contato} - Endereço: ${endereco} - Entrega: ${entrega} - Observação: ${observacao}
-      ACOMPANHAMENTOS
-          1x PAÇOCA
-          1x FLOCOS DE ARROZ
-          2x LEITE EM PÓ
-      ACOMPANHAMENTOS COPO 2
-          1x GRANOLA
-➡ 1x TRIBO CASADINHA 770ML 
-      ACOMPANHAMENTOS
-          1x PAÇOCA
-          1x LEITE EM PÓ
-          1x AMENDOIM FARELADO
-          1x UVA
-          1x CALDA DE UVA
-      ACOMPANHAMENTOS COPO 2
-          1x CALDA MORANGO
-          1x GRANOLA
-          1x LEITE EM PO
-          1x AMENDOIM FARELADO
-          1x UVA
+${cartItem}
 
-Observação: (Preciso de itens descartáveis)
+Nome: ${nome}
+Contato: ${contato}
+Endereço: ${endereco}
+Entrega: ${formaentrega}
+Bairro: ${bairro}
+Forma de pagamento: ${formapg}
+Observação: ${observacao}
 
-:credit_card: Cartão
+Total: R$${parseFloat(cartTotal.textContent.replace('R$', '').replace(',', '.')).toFixed(2)}
 
-:motor_scooter: Delivery (taxa de: R$ 0,00)
-:house: 
-(Estimativa: entre 50~80 minutos)
-
-Total: 
-
-Obrigado pela preferência, se precisar de algo é só chamar!`;
+Obrigado pela preferência, se precisar de algo é só chamar!
+  `;
 
   const encodedMessage = encodeURIComponent(mensagem);
 
@@ -256,12 +190,11 @@ Obrigado pela preferência, se precisar de algo é só chamar!`;
   updateCartModal();
 });
 
-//Verificar  a hora e manipular o card horário
+// Verificar a hora e manipular o card horário
 function checkRestaurantOpen() {
   const data = new Date();
   const hora = data.getHours();
   return hora >= 18 && hora < 22;
-  //true = restaurant estás aberto
 }
 
 const spanItem = document.getElementById("date-span");
